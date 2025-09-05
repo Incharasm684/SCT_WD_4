@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>To-Do App</h1>
+      <p>Organize tasks with lists, filters, search & due dates.</p>
+    </header>
+
+    <!-- Task Input -->
+    <section class="task-input">
+      <input type="text" id="taskTitle" placeholder="Enter task..." />
+      <input type="datetime-local" id="taskDateTime" />
+      <select id="taskList">
+        <option value="General">General</option>
+      </select>
+      <button class="btn" onclick="addTask()">Add Task</button>
+      <button class="btn secondary" onclick="addNewList()">+ New List</button>
+    </section>
+
+    <!-- Filters & Search -->
+    <section class="controls">
+      <div>
+        <button class="filter-btn" onclick="setFilter('all')">All</button>
+        <button class="filter-btn" onclick="setFilter('active')">Active</button>
+        <button class="filter-btn" onclick="setFilter('completed')">Completed</button>
+      </div>
+      <input type="text" id="searchBox" placeholder="🔍 Search tasks..." oninput="renderTasks()" />
+    </section>
+
+    <!-- Task Lists -->
+    <section id="lists"></section>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>

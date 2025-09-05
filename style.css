@@ -1,0 +1,108 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #b0e3ef;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 650px;
+  background: #ec60f3;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  color: #0077cc;
+  margin-bottom: 8px;
+}
+
+/* Input Section */
+.task-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.task-input input, .task-input select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+.btn {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn:hover { background: #005fa3; }
+.btn.secondary { background: #666; }
+.btn.secondary:hover { background: #444; }
+
+/* Filters & Search */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.filter-btn {
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  background: #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background: #0077cc;
+  color: #ffffffd7;
+}
+#searchBox {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Tasks */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #92afda;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.task:hover { background: #e6f0ff; }
+.task.completed {
+  text-decoration: line-through;
+  color: rgb(248, 252, 23);
+}
+.task button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 6px;
+  font-size: 16px;
+}
+.task button:hover { transform: scale(1.2); }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgb(243, 252, 65);
+}
